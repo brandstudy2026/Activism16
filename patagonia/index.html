@@ -15,6 +15,17 @@
       <strong>This is not a real petition.</strong> This page is part of a research study on brand communication and social engagement.
     </div>
   </div>
+
+      <script>
+    const startTime = Date.now();
+
+    window.addEventListener('beforeunload', () => {
+      const endTime = Date.now();
+      const timeSpent = endTime - startTime; // tempo in millisecondi
+      localStorage.setItem('timeOnLanding', timeSpent);
+    });
+  </script>
+  
   <script src="../script.js"></script>
 </body>
 </html>

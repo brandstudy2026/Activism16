@@ -25,15 +25,24 @@
   </div>
 
   <script>
+    // Inizio tracciamento tempo
     const startTime = Date.now();
+
     document.getElementById('return-btn').addEventListener('click', () => {
+      // Calcola tempo trascorso
       const timeSpent = Date.now() - startTime;
+      // Salva in localStorage (recuperabile in Qualtrics con JS personalizzato)
       localStorage.setItem('timeOnLanding', timeSpent);
-      // Redirect con i parametri Prolific già inclusi
-      location.href = 'https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}';
+      // Redirect al survey Qualtrics con i parametri Prolific
+      location.href = 
+        'https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ' +
+        '?PROLIFIC_PID={{%PROLIFIC_PID%}}' +
+        '&STUDY_ID={{%STUDY_ID%}}' +
+        '&SESSION_ID={{%SESSION_ID%}}';
     });
   </script>
 
   <script src="../script.js"></script>
 </body>
 </html>
+

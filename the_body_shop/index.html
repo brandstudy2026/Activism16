@@ -7,32 +7,39 @@
 </head>
 <body>
   <div class="container">
+    <!-- logo.png deve essere dentro the_body_shop/ -->
     <img src="logo.png" alt="the_body_shop logo" class="logo">
+
     <h1>The Body Shop Ramps Up the Fight for LGBTQ+ Rights</h1>
     <p>
-      The Body Shop is focusing on trans rights and broader LGBTQ+ equality in the cosmetics industry.
-      Help us advocate for nondiscrimination policies worldwide by signing our petition.
+      The Body Shop is focusing on trans rights and broader LGBTQ+ equality
+      in the cosmetics industry. Help us advocate for nondiscrimination
+      policies worldwide by signing our petition.
     </p>
+
+    <!-- BOTTONE PER IL RITORNO -->
     <button id="return-btn"
             onclick="location.href='https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ'">
       Return to Survey
     </button>
+
     <div class="disclaimer">
-      <strong>This is not a real petition.</strong><br>
+      <strong>This is not a real petition.</strong>
       This page is part of a research study on brand communication and social engagement.
     </div>
   </div>
 
+  <!-- SCRIPT PER MISURARE TEMPO SULLA PAGINA -->
   <script>
-    // Registra il tempo che il partecipante resta su questa pagina
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {
       const endTime = Date.now();
-      const timeSpent = endTime - startTime; // in ms
+      const timeSpent = endTime - startTime; // millisecondi
       localStorage.setItem('timeOnLanding', timeSpent);
     });
   </script>
 
+  <!-- IL TUO SCRIPT GENERALE -->
   <script src="../script.js"></script>
 </body>
 </html>

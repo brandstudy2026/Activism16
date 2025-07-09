@@ -2,30 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advancing LGBTQ+ Inclusion in the Cosmetics Industry</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="the_body_shop logo" class="logo">
+    <img src="logo.png" alt="The Body Shop logo" class="logo">
     <h1>Advancing LGBTQ+ Inclusion in the Cosmetics Industry</h1>
-    <p>While progress has been made in LGBTQ+ visibility, trans individuals still face exclusion and discrimination in employment and product marketing. Regulatory frameworks vary by country, and advocacy organizations are calling for standardized protections worldwide.</p>
-    <button id="return-btn" onclick="location.href='https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ'">Return to Survey</button>
+    <p>
+      While progress has been made in LGBTQ+ visibility, trans individuals still face exclusion
+      and discrimination in employment and product marketing. Regulatory frameworks vary by
+      country, and advocacy organizations are calling for standardized protections worldwide.
+    </p>
+    <button id="return-btn">
+      Return to Survey
+    </button>
     <div class="disclaimer">
-      <strong>This is not a real petition.</strong> This page is part of a research study on brand communication and social engagement.
+      <strong>This is not a real petition.</strong>
+      This page is part of a research study on brand communication and social engagement.
     </div>
   </div>
-  
+
   <script>
     const startTime = Date.now();
-
-    window.addEventListener('beforeunload', () => {
-      const endTime = Date.now();
-      const timeSpent = endTime - startTime; // tempo in millisecondi
+    document.getElementById('return-btn').addEventListener('click', () => {
+      const timeSpent = Date.now() - startTime;
       localStorage.setItem('timeOnLanding', timeSpent);
+      // Redirect con i parametri Prolific già inclusi
+      location.href = 'https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}';
     });
   </script>
-  
+
   <script src="../script.js"></script>
 </body>
 </html>

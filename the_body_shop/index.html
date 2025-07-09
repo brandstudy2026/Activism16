@@ -8,29 +8,27 @@
 <body>
   <div class="container">
     <img src="logo.png" alt="the_body_shop logo" class="logo">
-
     <h1>The Body Shop Ramps Up the Fight for LGBTQ+ Rights</h1>
     <p>
-      The Body Shop is focusing on trans rights and broader LGBTQ+ equality in the cosmetics industry. Help us advocate for nondiscrimination policies worldwide by signing our petition.
+      The Body Shop is focusing on trans rights and broader LGBTQ+ equality in the cosmetics industry.
+      Help us advocate for nondiscrimination policies worldwide by signing our petition.
     </p>
-
     <button id="return-btn"
             onclick="location.href='https://unc.az1.qualtrics.com/jfe/form/SV_dpshwYR13RpWonQ'">
       Return to Survey
     </button>
-
     <div class="disclaimer">
-      <strong>This is not a real petition.</strong>
+      <strong>This is not a real petition.</strong><br>
       This page is part of a research study on brand communication and social engagement.
     </div>
   </div>
 
   <script>
-    // Misura tempo trascorso sulla landing
+    // Registra il tempo che il partecipante resta su questa pagina
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {
       const endTime = Date.now();
-      const timeSpent = endTime - startTime;
+      const timeSpent = endTime - startTime; // in ms
       localStorage.setItem('timeOnLanding', timeSpent);
     });
   </script>
@@ -38,6 +36,7 @@
   <script src="../script.js"></script>
 </body>
 </html>
+
 
 
 
